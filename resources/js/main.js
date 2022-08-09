@@ -1,7 +1,17 @@
 window.addEventListener("load", function(){
-    $('body').css('background','red');
-    alert("a");
-})
+	/*
+	$('btn-like').css('cursor', 'pointer');
+	$('btn-like').css('cursor', 'pointer');
+	/*
+	const element = document.getElementById("red");
+	element.addEventListener("click", function(){
+		element.addClass('btn-dislike').removeClass('btn-like');
+		element.attr('src','img/heart-red.png');
+	});*/
+	
+});
+
+
 
 /*var url = 'http://proyecto-laravel.com.devel';
 window.addEventListener("load", function(){

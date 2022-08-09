@@ -7,7 +7,7 @@
     @endif
     <div class="data-user">
         <div class="card-header">{{ $image->user->name }} {{ $image->user->surname }}
-            <a href="{{route('image.detail',['id' => $image->id])}}">{{ $image->user->nick }}</a>
+            <a href="{{route('user.profile',['id' => $image->id])}}">{{ $image->user->nick }}</a>
           
         </div>
     </div>
@@ -34,16 +34,16 @@
             @endforeach
 
             @if($user_like)
-            <img src="{{asset('img/heart-red.png')}}" data-id="{{$image->id}}" class="btn-dislike"/>
+            <img id="red" src="{{asset('img/heart-red.png')}}" data-id="{{$image->id}}" class="btn-dislike"/>
             @else
-            <img src="{{asset('img/heart-black.png')}}" data-id="{{$image->id}}" class="btn-like"/>
+            <img id="black" src="{{asset('img/heart-black.png')}}" data-id="{{$image->id}}" class="btn-like"/>
             @endif
 
             <span class="number_likes">{{count($image->likes)}}</span>
         </div>
       
         <div class="comments">
-			<a href="" class="btn btn-sm btn-warning btn-comments">
+			<a href="{{route('image.detail',['id' => $image->id])}}" class="btn btn-sm btn-warning btn-comments">
 				Comentarios ({{count($image->comments)}})
 			</a>
 		</div>

@@ -44,3 +44,4 @@ Route::post('/comment/save', [App\Http\Controllers\ControllerComment::class, 'sa
 Route::get('/comment/delete/{id}', [App\Http\Controllers\ControllerComment::class, 'delete'])->name('comment.delete');
 Route::get('/like/{image_id}', [App\Http\Controllers\LikeController::class, 'like'])->name('like.save');
 Route::get('/dislike/{image_id}', [App\Http\Controllers\LikeController::class, 'dislike'])->name('like.delete');
+Route::get('/profile/{id}', [App\Http\Controllers\UserController::class, 'profile'])->name('user.profile');
