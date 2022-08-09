@@ -37,6 +37,7 @@ Route::get('/configuracion', [App\Http\Controllers\UserController::class, 'confi
 Route::post('/user/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
 Route::get('/user/avatar/{filename}', [App\Http\Controllers\UserController::class, 'getImagen'])->name('user.avatar');
 Route::get('/subir-imagen', [App\Http\Controllers\ImageController::class, 'create'])->name('image.create');
+
 Route::post('/image/save', [App\Http\Controllers\ImageController::class, 'save'])->name('image.save');
 Route::get('/image/get/{filename}', [App\Http\Controllers\ImageController::class, 'getImage'])->name('image.get');
 Route::get('/image/{id}', [App\Http\Controllers\ImageController::class, 'detail'])->name('image.detail');

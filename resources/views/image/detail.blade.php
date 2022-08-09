@@ -13,7 +13,7 @@
                     @endif
                     <div class="data-user">
                         <div class="card-header">{{ $image->user->name }} {{ $image->user->surname }}
-                            <a href="{{route('user.profile',['id' => $image->id])}}">{{'@'.$image->user->nick}} </a>
+                            <a href="{{route('image.detail',['id' => $image->id])}}">{{'@'.$image->user->nick}} </a>
                           
                         </div>
                     </div>
